@@ -1,4 +1,4 @@
-package chapter3exercises;
+package exercises.chapter3exercises;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -11,7 +11,6 @@ public class GradeBook {
         String newStudent;
 
         System.out.println("Enter your students IDs (or ENTER to finish: ");
-
 
     }
 }
