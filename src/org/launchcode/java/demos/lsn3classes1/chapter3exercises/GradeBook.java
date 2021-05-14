@@ -1,4 +1,4 @@
-package exercises.chapter3exercises;
+package org.launchcode.java.demos.lsn3classes1.chapter3exercises;
 
 import java.util.HashMap;
 import java.util.Scanner;
