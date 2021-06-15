@@ -6,6 +6,7 @@ import java.util.Arrays;
 public class Case {
     private ArrayList<Flavor> flavors = new ArrayList<>();
     private ArrayList<Cone> cones = new ArrayList<>();
+    private ArrayList<Topping> toppings = new ArrayList<>();
 
     public Case(){
         Cone cone1 = new Cone("Waffle", 1.25, new ArrayList<>(Arrays.asList( "gluten")));
@@ -17,7 +18,10 @@ public class Case {
         cones.add(cone3);
         cones.add(cone4);
 
-        Flavor flavor1 = new Flavor("Vanilla", 0.75, new ArrayList<>(Arrays.asList( "dairy")));
+
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("dairy");
+        Flavor flavor1 = new Flavor("Vanilla", 0.75, strings);
         Flavor flavor2 = new Flavor("Chocolate", 0.75, new ArrayList<>(Arrays.asList( "dairy")));
         Flavor flavor3 = new Flavor("Red Velvet", 0.85, new ArrayList<>(Arrays.asList( "dairy", "red #5")));
         Flavor flavor4 = new Flavor("Rocky Road", 0.85, new ArrayList<>(Arrays.asList( "dairy", "nuts", "gelatin")));
@@ -27,6 +31,16 @@ public class Case {
         flavors.add(flavor3);
         flavors.add(flavor4);
         flavors.add(flavor5);
+
+        Topping topping1 = new Topping("Hot Fudge", 0.15, new ArrayList<>(Arrays.asList("dairy")));
+        Topping topping2 = new Topping("Whipped cream", 0.10, new ArrayList<>(Arrays.asList("dairy")));
+        Topping topping3 = new Topping("Sprinkles", 0.05, new ArrayList<>(Arrays.asList("red #5")));
+        Topping topping4 = new Topping("Nuts", 0.10, new ArrayList<>(Arrays.asList("nuts")));
+        toppings.add(topping1);
+        toppings.add(topping2);
+        toppings.add(topping3);
+        toppings.add(topping4);
+
     }
 
     public ArrayList<Flavor> getFlavors() {
@@ -43,5 +57,13 @@ public class Case {
 
     public void setCones(ArrayList<Cone> cones) {
         this.cones = cones;
+    }
+
+    public ArrayList<Topping> getToppings() {
+        return toppings;
+    }
+
+    public void setToppings(ArrayList<Topping> toppings) {
+        this.toppings = toppings;
     }
 }
